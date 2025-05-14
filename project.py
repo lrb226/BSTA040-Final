@@ -3,8 +3,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from scipy.stats import expon
-import plotly.express as px
-import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 
 
@@ -44,4 +42,3 @@ ax.grid(True)
 
 st.pyplot(fig)
 st.markdown("The graph above is a histogram that displays the density of the percentage of influenza-like illnesses. The histogram changes based on the state selected, only displaying the data for that specific state. It visualizes the distribution of ILI % in the population. It is overlaid by a red line which is an estimated exponential distribution based on data from all data across 50 states. The distribution assumes that all of the ILI values were drawn independently from the same distribution. Lambda “hat” which is used in the exponential distribution in the y-value for the overlay is 1 over the average value of the ILI %. The line represents the probability density function of the distribution, which allows us to compare the recorded observations to a theoretical distribution.  Majority of the values are concentrated towards the beginning of the distribution across all states, which tells us that it is more common to see lower percentages of  influenza-like illnesses. The exponential follows a similar path starting at a high density and steeply declining and continuing to taper off as the x-values increase. This displays that the exponential distribution has potential to be a pretty good fit for the data, although there is room for improvement.")
-
